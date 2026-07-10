@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meireles Digital — Sites que valorizam o seu negócio</title>
+<title>Meireles Digital — Estrutura Digital Completa para Empresas</title>
+<meta name="description" content="Construímos a estrutura digital completa da sua empresa: site profissional, SEO técnico, Google Meu Negócio, Google Maps, integração com WhatsApp e suporte contínuo. Mais visibilidade, mais confiança, mais clientes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -354,6 +355,90 @@
     .hero h1{font-size:34px;}
   }
 
+  /* ================= SEÇÃO — JORNADA DO CLIENTE ================= */
+  .journey-track{
+    display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+    gap:0;max-width:1100px;margin:0 auto;
+  }
+  .journey-step{
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    width:150px;
+  }
+  .journey-icon{
+    width:64px;height:64px;border-radius:50%;
+    border:1.5px solid var(--gold-dim);
+    background: linear-gradient(160deg, rgba(217,164,65,0.08), transparent);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold-bright);margin-bottom:16px;
+    transition: transform .3s ease, border-color .3s ease;
+  }
+  .journey-icon svg{width:26px;height:26px;}
+  .journey-step:hover .journey-icon{transform: scale(1.08);border-color:var(--gold-bright);}
+  .journey-step h4{font-size:13.5px;color:#fff;font-weight:600;margin-bottom:4px;}
+  .journey-step p{font-size:11.5px;color:var(--text-dim);line-height:1.4;}
+  .journey-arrow{
+    color:var(--gold-dim);font-size:20px;flex-shrink:0;
+    margin:0 4px;
+    align-self:center;
+    margin-top:-40px;
+  }
+  @media (max-width: 900px){
+    .journey-track{flex-direction:column;gap:26px;}
+    .journey-arrow{transform: rotate(90deg);margin-top:0;}
+  }
+
+  /* ================= SEÇÃO — ESTRUTURA DIGITAL (diagrama) ================= */
+  .structure-section{
+    background: radial-gradient(circle at 50% 0%, rgba(217,164,65,0.05), transparent 60%);
+    border-top:1px solid rgba(255,255,255,0.05);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+  }
+  .structure-diagram{
+    max-width:900px;margin:0 auto;position:relative;
+    display:flex;flex-direction:column;align-items:center;gap:0;
+  }
+  .structure-hub{
+    width:120px;height:120px;border-radius:50%;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+    color:#191305;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-weight:800;font-size:15px;text-align:center;line-height:1.25;
+    box-shadow: 0 20px 50px rgba(217,164,65,0.25);
+    position:relative;z-index:2;
+    margin-bottom:-1px;
+  }
+  .structure-nodes{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+    width:100%;margin-top:50px;position:relative;
+  }
+  .structure-nodes::before{
+    content:"";position:absolute;top:-50px;left:50%;transform:translateX(-50%);
+    width:1px;height:50px;background: linear-gradient(180deg, var(--gold-dim), transparent);
+  }
+  .structure-node{
+    background: rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:14px;
+    padding:22px 14px;
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;
+    transition: transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .structure-node:hover{
+    transform: translateY(-5px);
+    border-color: var(--gold-dim);
+    background: rgba(217,164,65,0.06);
+  }
+  .structure-node .n-icon{
+    width:38px;height:38px;border-radius:10px;
+    background: rgba(217,164,65,0.1);color:var(--gold-bright);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .structure-node .n-icon svg{width:18px;height:18px;}
+  .structure-node span{font-size:12.5px;color:#e9e5da;font-weight:500;}
+  @media (max-width: 900px){
+    .structure-nodes{grid-template-columns:repeat(2,1fr);}
+  }
+
   /* ================= SEÇÃO 2 — SOLUÇÕES ================= */
   .section{padding: 110px 60px;max-width:1320px;margin:0 auto;}
   .section-head{max-width:680px;margin:0 auto 60px;text-align:center;}
@@ -364,6 +449,37 @@
   .section-head h2{font-size:34px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:16px;}
   .section-head h2 .accent{color:var(--gold-bright);}
   .section-head p{color:var(--text-dim);font-size:16px;line-height:1.7;}
+
+  /* Grid de soluções (checklist ampliado) */
+  .solutions-checklist{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:16px;
+  }
+  .solution-chip{
+    background: linear-gradient(160deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.07);
+    border-radius:14px;
+    padding:22px 16px;
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;
+    transition: transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .solution-chip:hover{
+    transform: translateY(-6px);
+    border-color: var(--gold-dim);
+    background: linear-gradient(160deg, rgba(217,164,65,0.07), rgba(255,255,255,0.01));
+  }
+  .solution-chip .s-icon{
+    width:42px;height:42px;border-radius:11px;
+    background: rgba(217,164,65,0.1);color:var(--gold-bright);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .solution-chip .s-icon svg{width:19px;height:19px;}
+  .solution-chip span{font-size:12.5px;color:#e9e5da;font-weight:600;line-height:1.35;}
+  @media (max-width: 1150px){
+    .solutions-checklist{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width: 640px){
+    .solutions-checklist{grid-template-columns:repeat(2,1fr);}
+  }
 
   .cards-grid{
     display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
@@ -459,6 +575,7 @@
   .featured-laptop .laptop{width:100%;}
   .featured-laptop .screen{border-radius: 20px 20px 8px 8px;padding:14px;}
   .featured-laptop .screen-inner{min-height:460px;padding:36px 42px 42px;}
+  .featured-laptop .screen-inner.has-image{min-height:0;padding:0;}
   .featured-laptop .site-brand .name{font-size:22px;}
   .featured-laptop .site-copy h3{font-size:30px;}
   .featured-laptop .site-copy h4{font-size:22px;}
@@ -544,6 +661,70 @@
   .final-cta h2 span{color:var(--gold-bright);}
   .final-cta .btn{font-size:16px;padding:18px 38px;}
 
+  .final-cta-divider{
+    display:flex;align-items:center;gap:16px;
+    max-width:420px;width:100%;margin:44px 0 36px;
+    color:var(--text-dim);font-size:12.5px;text-transform:uppercase;letter-spacing:1px;
+  }
+  .final-cta-divider::before,.final-cta-divider::after{
+    content:"";flex:1;height:1px;background: rgba(255,255,255,0.1);
+  }
+
+  .contact-form{
+    width:100%;max-width:560px;
+    display:grid;grid-template-columns:1fr 1fr;gap:16px;
+    text-align:left;
+  }
+  .contact-form .field-full{grid-column:1 / -1;}
+  .contact-form label{
+    display:block;font-size:12.5px;color:var(--text-dim);margin-bottom:7px;font-weight:500;
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea{
+    width:100%;
+    background: rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:10px;
+    padding:13px 14px;
+    color:#f5f2ea;
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    outline:none;
+    transition: border-color .2s ease, background .2s ease;
+  }
+  .contact-form select{
+    appearance:none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d9a441' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position: right 14px center;
+    background-size:16px;
+    cursor:pointer;
+  }
+  .contact-form select option{background:#151109;color:#f5f2ea;}
+  .contact-form textarea{resize:vertical;min-height:90px;font-family:inherit;}
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder{color:#6b6659;}
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus{
+    border-color: var(--gold);
+    background: rgba(217,164,65,0.04);
+  }
+  .contact-form .form-submit{
+    grid-column:1 / -1;
+    width:100%;justify-content:center;
+    border:none;cursor:pointer;
+    margin-top:6px;
+  }
+  .contact-form .form-note{
+    grid-column:1 / -1;
+    font-size:12px;color:var(--text-dim);text-align:center;margin-top:-6px;
+  }
+  @media (max-width: 620px){
+    .contact-form{grid-template-columns:1fr;}
+  }
+
   footer{
     text-align:center;padding:34px 24px;color:var(--text-dim);font-size:12.5px;
     border-top:1px solid rgba(255,255,255,0.05);
@@ -581,7 +762,7 @@
     <a href="#sobre">Sobre</a>
     <a href="#contato">Contato</a>
   </nav>
-  <a href="https://wa.me/5571993767346" class="btn btn-gold" style="padding:13px 22px;">
+  <a href="https://wa.me/5571993767346?text=Ol%C3%A1%2C%20Vim%20pelo%20site" class="btn btn-gold" style="padding:13px 22px;">
     ☎ Solicitar orçamento
   </a>
   <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu">
@@ -592,17 +773,17 @@
 <main>
   <section class="hero">
     <div class="hero-left">
-      <div class="badge reveal">&lt;/&gt; DESENVOLVIMENTO DE SITES PROFISSIONAIS</div>
-      <h1 class="reveal">Sua empresa merece um site que <span class="accent">inspire confiança</span> desde o primeiro clique.</h1>
-      <p class="lead reveal">Criamos sites modernos, rápidos e personalizados para empresas que desejam fortalecer sua presença digital e facilitar o contato com seus clientes.</p>
+      <div class="badge reveal">&lt;/&gt; ESTRUTURA DIGITAL PARA EMPRESAS</div>
+      <h1 class="reveal">Sua empresa merece mais do que um site. Merece uma <span class="accent">estrutura digital completa</span>.</h1>
+      <p class="lead reveal">Construímos a presença digital da sua empresa do zero: site profissional, SEO técnico, Google Meu Negócio, Maps e WhatsApp integrados — tudo trabalhando junto para transmitir credibilidade e transformar visitantes em clientes.</p>
       <div class="hero-ctas reveal">
-        <a href="https://wa.me/5571993767346" class="btn btn-gold">☎ Solicitar orçamento →</a>
+        <a href="https://wa.me/5571993767346?text=Ol%C3%A1%2C%20Vim%20pelo%20site" class="btn btn-gold">☎ Solicitar orçamento →</a>
         <a href="#portfolio" class="btn btn-dark">Ver portfólio →</a>
       </div>
       <div class="checks reveal">
         <div class="check-item">
           <div class="check-circle">✓</div>
-          <span>Atendimento<br>personalizado</span>
+          <span>Estrutura<br>completa</span>
         </div>
         <div class="check-item">
           <div class="check-circle">✓</div>
@@ -610,7 +791,7 @@
         </div>
         <div class="check-item">
           <div class="check-circle">✓</div>
-          <span>Suporte<br>pós-entrega</span>
+          <span>Suporte<br>contínuo</span>
         </div>
       </div>
     </div>
@@ -684,41 +865,145 @@
     </div>
   </section>
 
+  <!-- ============ SEÇÃO — COMO O CLIENTE ENCONTRA SUA EMPRESA ============ -->
+  <section class="section">
+    <div class="section-head reveal">
+      <span class="eyebrow">O caminho até o cliente</span>
+      <h2>Como um cliente <span class="accent">encontra</span> sua empresa</h2>
+      <p>Cada etapa precisa funcionar — uma falha em qualquer ponto e a oportunidade se perde.</p>
+    </div>
+    <div class="journey-track">
+      <div class="journey-step reveal">
+        <div class="journey-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"></path></svg></div>
+        <h4>Cliente</h4>
+        <p>Precisa de um produto ou serviço</p>
+      </div>
+      <div class="journey-arrow reveal">→</div>
+      <div class="journey-step reveal">
+        <div class="journey-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg></div>
+        <h4>Pesquisa no Google</h4>
+        <p>Busca uma solução próxima</p>
+      </div>
+      <div class="journey-arrow reveal">→</div>
+      <div class="journey-step reveal">
+        <div class="journey-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 5.2 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.8-3-7-7-7z"></path><circle cx="12" cy="9" r="2.3"></circle></svg></div>
+        <h4>Encontra sua empresa</h4>
+        <p>Aparece no Google e no Maps</p>
+      </div>
+      <div class="journey-arrow reveal">→</div>
+      <div class="journey-step reveal">
+        <div class="journey-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+        <h4>Acessa o site</h4>
+        <p>Conhece seus serviços</p>
+      </div>
+      <div class="journey-arrow reveal">→</div>
+      <div class="journey-step reveal">
+        <div class="journey-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.8 8.4 8.5 8.5 0 0 1-4-1L3 20l1.2-5A8.4 8.4 0 1 1 21 11.5z"></path></svg></div>
+        <h4>Fala no WhatsApp</h4>
+        <p>Tira dúvidas com facilidade</p>
+      </div>
+      <div class="journey-arrow reveal">→</div>
+      <div class="journey-step reveal">
+        <div class="journey-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg></div>
+        <h4>Solicita orçamento</h4>
+        <p>Vira cliente</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEÇÃO — ESTRUTURA DIGITAL ============ -->
+  <section class="section structure-section">
+    <div class="section-head reveal">
+      <span class="eyebrow">O que sustenta a presença digital</span>
+      <h2>Um site sozinho não resolve. <span class="accent">Uma estrutura, sim.</span></h2>
+      <p>Google, Maps, WhatsApp, Instagram e SEO precisam trabalhar juntos — é isso que constrói confiança e gera contato.</p>
+    </div>
+    <div class="structure-diagram reveal">
+      <div class="structure-hub">Sua<br>Empresa</div>
+      <div class="structure-nodes">
+        <div class="structure-node">
+          <div class="n-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"></path></svg></div>
+          <span>Google</span>
+        </div>
+        <div class="structure-node">
+          <div class="n-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 5.2 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.8-3-7-7-7z"></path><circle cx="12" cy="9" r="2.3"></circle></svg></div>
+          <span>Google Meu Negócio</span>
+        </div>
+        <div class="structure-node">
+          <div class="n-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 10.5c0 5-8.5 10.5-8.5 10.5S3.5 15.5 3.5 10.5a8.5 8.5 0 0 1 17 0z"></path><circle cx="12" cy="10.5" r="2.6"></circle></svg></div>
+          <span>Google Maps</span>
+        </div>
+        <div class="structure-node">
+          <div class="n-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+          <span>Site</span>
+        </div>
+        <div class="structure-node">
+          <div class="n-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.8 8.4 8.5 8.5 0 0 1-4-1L3 20l1.2-5A8.4 8.4 0 1 1 21 11.5z"></path></svg></div>
+          <span>WhatsApp</span>
+        </div>
+        <div class="structure-node">
+          <div class="n-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle></svg></div>
+          <span>Instagram</span>
+        </div>
+        <div class="structure-node">
+          <div class="n-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"></path></svg></div>
+          <span>Landing Pages</span>
+        </div>
+        <div class="structure-node">
+          <div class="n-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg></div>
+          <span>SEO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ SEÇÃO 2 — SOLUÇÕES ============ -->
   <section class="section" id="servicos">
     <div class="section-head reveal">
-      <span class="eyebrow">O que fazemos</span>
-      <h2>Soluções para empresas que querem <span class="accent">crescer</span></h2>
-      <p>Criamos experiências digitais que fortalecem a imagem da sua empresa.</p>
+      <span class="eyebrow">O que entregamos</span>
+      <h2>Estrutura digital completa, não apenas um <span class="accent">site</span></h2>
+      <p>Cada peça trabalha junto para transmitir credibilidade e facilitar o contato com novos clientes.</p>
     </div>
-    <div class="cards-grid">
-      <div class="solution-card reveal">
-        <div class="solution-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-        </div>
-        <h3>Site Institucional</h3>
-        <p>Uma presença profissional para sua empresa.</p>
+    <div class="solutions-checklist">
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+        <span>Site Profissional</span>
       </div>
-      <div class="solution-card reveal">
-        <div class="solution-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
-        </div>
-        <h3>Landing Pages</h3>
-        <p>Páginas desenvolvidas para campanhas e divulgação.</p>
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"></path></svg></div>
+        <span>Landing Pages</span>
       </div>
-      <div class="solution-card reveal">
-        <div class="solution-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 0 18 4.5 4.5 0 0 1-1.5-8.7A2.5 2.5 0 1 0 9 8"></path><circle cx="9" cy="8" r="0.6" fill="currentColor" stroke="none"></circle></svg>
-        </div>
-        <h3>Identidade Digital</h3>
-        <p>Organização visual da sua presença online.</p>
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg></div>
+        <span>SEO Técnico</span>
       </div>
-      <div class="solution-card reveal">
-        <div class="solution-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"></path><rect x="2.5" y="13" width="4" height="6" rx="1.5"></rect><rect x="17.5" y="13" width="4" height="6" rx="1.5"></rect><path d="M20 19v1a3 3 0 0 1-3 3h-4"></path></svg>
-        </div>
-        <h3>Suporte</h3>
-        <p>Atualizações e acompanhamento contínuo.</p>
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 5.2 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.8-3-7-7-7z"></path><circle cx="12" cy="9" r="2.3"></circle></svg></div>
+        <span>Google Meu Negócio</span>
+      </div>
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.8 8.4 8.5 8.5 0 0 1-4-1L3 20l1.2-5A8.4 8.4 0 1 1 21 11.5z"></path></svg></div>
+        <span>Integração WhatsApp</span>
+      </div>
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 10.5c0 5-8.5 10.5-8.5 10.5S3.5 15.5 3.5 10.5a8.5 8.5 0 0 1 17 0z"></path><circle cx="12" cy="10.5" r="2.6"></circle></svg></div>
+        <span>Google Maps</span>
+      </div>
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15a4 4 0 0 1 2-7 5 5 0 0 1 9.6-1.6A4.5 4.5 0 0 1 20 11a4 4 0 0 1-1 8H6a4 4 0 0 1-3-4z"></path></svg></div>
+        <span>Hospedagem</span>
+      </div>
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"></path><path d="M9.5 12.2l1.8 1.8 3.2-3.6"></path></svg></div>
+        <span>SSL &amp; Segurança</span>
+      </div>
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 4 14 11 14 10 22 20 9 13 9 13 2"></polygon></svg></div>
+        <span>Performance</span>
+      </div>
+      <div class="solution-chip reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"></path><rect x="2.5" y="13" width="4" height="6" rx="1.5"></rect><rect x="17.5" y="13" width="4" height="6" rx="1.5"></rect><path d="M20 19v1a3 3 0 0 1-3 3h-4"></path></svg></div>
+        <span>Suporte Contínuo</span>
       </div>
     </div>
   </section>
@@ -727,7 +1012,7 @@
   <section class="section" id="processo">
     <div class="section-head reveal">
       <span class="eyebrow">Como trabalhamos</span>
-      <h2>Como transformamos sua ideia em um <span class="accent">site profissional</span></h2>
+      <h2>Como construímos a <span class="accent">estrutura digital</span> da sua empresa</h2>
     </div>
     <div class="timeline-wrap reveal" id="timelineWrap">
       <div class="timeline-track">
@@ -750,7 +1035,7 @@
         <div class="timeline-step" data-step="4">
           <div class="timeline-dot">04</div>
           <h4>Desenvolvimento</h4>
-          <p>Construímos o site com performance e cuidado.</p>
+          <p>Construímos o site e configuramos SEO, GMN e WhatsApp.</p>
         </div>
         <div class="timeline-step" data-step="5">
           <div class="timeline-dot">05</div>
@@ -803,35 +1088,69 @@
   <section class="commitment" id="sobre">
     <span class="eyebrow reveal">Nosso compromisso</span>
     <div class="commitment-mark reveal"></div>
-    <p class="reveal">Cada projeto recebe atenção aos detalhes, foco em desempenho e uma identidade visual alinhada ao negócio do cliente. Nosso compromisso é entregar um site que represente a qualidade da empresa e ofereça uma ótima experiência para quem visita.</p>
+    <p class="reveal">Cada projeto recebe atenção aos detalhes, foco em desempenho e uma estrutura digital alinhada ao negócio do cliente. Nosso compromisso é entregar mais do que um site: uma presença online que represente a credibilidade da empresa e facilite o contato com novos clientes.</p>
   </section>
 
   <!-- ============ SEÇÃO 6 — OFERTA ============ -->
   <section class="section" id="oferta">
     <div class="section-head reveal">
       <span class="eyebrow">Investimento</span>
-      <h2>Um plano simples, sem <span class="accent">complicação</span></h2>
+      <h2>Um plano simples para toda a <span class="accent">estrutura digital</span></h2>
     </div>
     <div class="pricing-grid">
       <div class="price-card highlight reveal">
-        <div class="tag">Implantação</div>
+        <div class="tag">Implantação da Estrutura</div>
         <div class="value">R$ 497</div>
-        <p class="desc">Site completo, responsivo e no ar.</p>
-        <a href="https://wa.me/5571993767346" class="btn btn-gold">Solicitar orçamento</a>
+        <p class="desc">Site, SEO técnico, Google Meu Negócio, Maps e WhatsApp integrados.</p>
+        <a href="https://wa.me/5571993767346?text=Ol%C3%A1%2C%20Vim%20pelo%20site" class="btn btn-gold">Solicitar orçamento</a>
       </div>
       <div class="price-card reveal">
-        <div class="tag">Suporte</div>
+        <div class="tag">Suporte Contínuo</div>
         <div class="value">R$ 97 <small>/mês</small></div>
-        <p class="desc">Atualizações e acompanhamento contínuo.</p>
-        <a href="https://wa.me/5571993767346" class="btn btn-outline">Saiba mais</a>
+        <p class="desc">Hospedagem, SSL, atualizações e acompanhamento contínuo.</p>
+        <a href="https://wa.me/5571993767346?text=Ol%C3%A1%2C%20Vim%20pelo%20site" class="btn btn-outline">Saiba mais</a>
       </div>
     </div>
   </section>
 
   <!-- ============ CTA FINAL ============ -->
   <section class="final-cta" id="contato">
-    <h2 class="reveal">Vamos criar um site que represente <span>a qualidade da sua empresa?</span></h2>
-    <a href="https://wa.me/5571993767346" class="btn btn-gold reveal">☎ Solicitar orçamento →</a>
+    <h2 class="reveal">Pronto para parar de perder clientes <span>para quem aparece primeiro no Google?</span></h2>
+    <a href="https://wa.me/5571993767346?text=Ol%C3%A1%2C%20Vim%20pelo%20site" class="btn btn-gold reveal">☎ Solicitar orçamento →</a>
+
+    <div class="final-cta-divider reveal">ou preencha o formulário</div>
+
+    <form class="contact-form reveal" id="contactForm">
+      <div>
+        <label for="cf-name">Nome</label>
+        <input type="text" id="cf-name" name="nome" placeholder="Seu nome" required>
+      </div>
+      <div>
+        <label for="cf-phone">WhatsApp</label>
+        <input type="tel" id="cf-phone" name="telefone" placeholder="(71) 90000-0000" required>
+      </div>
+      <div class="field-full">
+        <label for="cf-email">E-mail</label>
+        <input type="email" id="cf-email" name="email" placeholder="seu@email.com">
+      </div>
+      <div class="field-full">
+        <label for="cf-service">Tipo de serviço</label>
+        <select id="cf-service" name="servico" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="Estrutura Digital Completa">Estrutura Digital Completa</option>
+          <option value="Site Institucional">Site Institucional</option>
+          <option value="Landing Page">Landing Page</option>
+          <option value="Suporte / Manutenção">Suporte / Manutenção</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+      <div class="field-full">
+        <label for="cf-message">Mensagem</label>
+        <textarea id="cf-message" name="mensagem" placeholder="Conte um pouco sobre sua empresa e o que você precisa..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold form-submit">Enviar via WhatsApp →</button>
+      <span class="form-note">Ao enviar, você será direcionado ao WhatsApp com sua mensagem pronta.</span>
+    </form>
   </section>
 </main>
 
@@ -966,6 +1285,30 @@
     window.addEventListener('scroll', updateTimeline, { passive:true });
     window.addEventListener('resize', updateTimeline);
     updateTimeline();
+  }
+
+  /* ---- Formulário de contato → WhatsApp ---- */
+  const contactForm = document.getElementById('contactForm');
+  if(contactForm){
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nome = document.getElementById('cf-name').value.trim();
+      const telefone = document.getElementById('cf-phone').value.trim();
+      const email = document.getElementById('cf-email').value.trim();
+      const servico = document.getElementById('cf-service').value;
+      const mensagem = document.getElementById('cf-message').value.trim();
+
+      let texto = `Olá, vim pelo site.\n\n`;
+      texto += `Nome: ${nome}\n`;
+      texto += `WhatsApp: ${telefone}\n`;
+      if(email) texto += `E-mail: ${email}\n`;
+      texto += `Serviço de interesse: ${servico}\n`;
+      if(mensagem) texto += `Mensagem: ${mensagem}`;
+
+      const url = `https://wa.me/5571993767346?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    });
   }
 
   /* ---- Header: leve sombra ao rolar ---- */
